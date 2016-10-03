@@ -1,0 +1,6 @@
+plot(x=HPC2007$DateTime,y=HPC2007$Sub_metering_1,type='l',col='black',ylab="Energy sub metering",xlab="")
+lines(x=HPC2007$DateTime,y=HPC2007$Sub_metering_2,col="red")
+lines(x=HPC2007$DateTime,y=HPC2007$Sub_metering_3,col="blue")
+legend('topright',col=c("black","red","blue"),names(HPC2007[,7:9]),lty=1,bty=0)
+dev.copy(device=png,file="plot3.png",height=480,width=480)
+dev.off()

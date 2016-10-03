@@ -1,0 +1,5 @@
+HPC2007$Date<-as.Date(HPC2007$Date, "%d/%m/%Y")
+HPC2007$DateTime <- as.POSIXct(paste(HPC2007$Date,HPC2007$Time), format="%Y-%m-%d %H:%M:%S")
+plot(x=HPC2007$DateTime,y=HPC2007$Global_active_power,type='l',ylab="Global Active Power (kilowatts)",xlab="")
+dev.copy(device=png,file="plot2.png",height=480,width=480)
+dev.off()
